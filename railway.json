@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "mvn clean package"
+  },
+  "deploy": {
+    "startCommand": "java -jar target/calendar-puzzle-lite-1.0-SNAPSHOT.jar",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
