@@ -32,14 +32,25 @@ public class PuzzleSolver {
     int[] idxDate = PieceUtils.findrevealMapIdx(date);
     int[] idxDay = PieceUtils.findrevealMapIdx(day);
     int[] idxMonth = PieceUtils.findrevealMapIdx(month);
-    System.out.println(idxDay[0] + " " + idxDay[1]);
+    // System.out.println("Date received: " + date);
+    // System.out.println("Day received: " + day);
+    // System.out.println("Month received: " + month);
 
-    PieceUtils.display(board);
+    // System.out
+    // .println("Looking up date: " + date + ", found: " + (idxDate != null ?
+    // Arrays.toString(idxDate) : "null"));
+    // System.out.println("Looking up day: " + day + ", found: " + (idxDay != null ?
+    // Arrays.toString(idxDay) : "null"));
+    // System.out
+    // .println("Looking up month: " + month + ", found: " + (idxMonth != null ?
+    // Arrays.toString(idxMonth) : "null"));
+
     // Fix positions on board
     PieceUtils.fixPositions(idxMonth, board);
     PieceUtils.fixPositions(idxDate, board);
     PieceUtils.fixPositions(idxDay, board);
 
+    // PieceUtils.display(board);
     // Solve the puzzle
     boolean solved = recursion(board);
 
