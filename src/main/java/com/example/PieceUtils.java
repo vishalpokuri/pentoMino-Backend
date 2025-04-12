@@ -49,6 +49,7 @@ public class PieceUtils {
       Map.entry("25", new int[] { 4, 4 }),
       Map.entry("26", new int[] { 4, 5 }),
       Map.entry("27", new int[] { 4, 6 }),
+      Map.entry("Sun", new int[] { 4, 8 }),
       Map.entry("Sep", new int[] { 5, 0 }),
       Map.entry("Oct", new int[] { 5, 1 }),
       Map.entry("Nov", new int[] { 5, 2 }),
