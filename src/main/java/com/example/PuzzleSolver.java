@@ -32,7 +32,9 @@ public class PuzzleSolver {
     int[] idxDate = PieceUtils.findrevealMapIdx(date);
     int[] idxDay = PieceUtils.findrevealMapIdx(day);
     int[] idxMonth = PieceUtils.findrevealMapIdx(month);
+    System.out.println(idxDay[0] + " " + idxDay[1]);
 
+    PieceUtils.display(board);
     // Fix positions on board
     PieceUtils.fixPositions(idxMonth, board);
     PieceUtils.fixPositions(idxDate, board);
