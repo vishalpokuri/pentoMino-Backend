@@ -12,7 +12,12 @@ import java.io.BufferedReader;
 
 public class JettyCalendarServer extends AbstractHandler {
   public static void main(String[] args) throws Exception {
-    Server server = new Server(8080);
+    String port = System.getenv("PORT");
+    if (port == null) {
+      port = "8080"; // Fallback for local dev
+    }
+    Server server = new Server(Integer.parseInt(port));
+
     server.setHandler(new JettyCalendarServer());
     server.start();
     System.out.println("Server started at http://localhost:8080/");
